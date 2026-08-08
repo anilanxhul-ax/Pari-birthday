@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17122b">
+  <title>Happy Birthday Pari ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-heart">♡</div>
+    <p>Something special is waiting for you...</p>
+  </div>
+
+  <canvas id="stars"></canvas>
+  <div class="petals" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero">
+      <div class="glow"></div>
+      <div class="hero-card">
+        <p class="eyebrow">A little surprise, made especially for you</p>
+        <h1>Happy Birthday,<br><span>Pari</span> <b>♥</b></h1>
+        <p class="hero-sub">Someone very special was born today. ✨</p>
+        <button class="primary" onclick="scrollToId('message')">Open Your Surprise <span>→</span></button>
+      </div>
+      <div class="scroll">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section id="message" class="section">
+      <div class="section-label">01 · A little note</div>
+      <div class="letter reveal">
+        <p class="script">For you, Pari...</p>
+        <h2>Some people make ordinary days feel a little more beautiful.</h2>
+        <p>Aaj ka din mere liye bhi special hai, kyunki aaj tum is duniya mein aayi thi. 🎂</p>
+        <p>Bas dil se itni si wish hai ki tum hamesha khush raho, hamesha smile karti raho, aur tumhare har chhote-bade sapne poore hon.</p>
+        <p>Shayad hum ek dusre se door hain, lekin distance kisi ki care, wishes aur feelings ko kam nahi kar sakta. Tumhare liye meri dua hamesha wahi rahegi — <strong>tum khush raho, safe raho aur life mein bahut aage jao.</strong></p>
+        <p>Enjoy your day, birthday girl. You deserve all the beautiful things life has to offer. 🤍</p>
+        <p class="signature">Happy Birthday, Pari.<br><span>With lots of good wishes ♥</span></p>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-label">02 · Little moments</div>
+      <h2 class="center-title">A place for your favorite memories.</h2>
+      <p class="center-sub">Replace these placeholders with Pari's photos in the <code>photos</code> folder.</p>
+      <div class="gallery">
+        <div class="photo"><span>YOUR PHOTO</span><small>01</small></div>
+        <div class="photo tall"><span>YOUR PHOTO</span><small>02</small></div>
+        <div class="photo"><span>YOUR PHOTO</span><small>03</small></div>
+        <div class="photo tall"><span>YOUR PHOTO</span><small>04</small></div>
+        <div class="photo"><span>YOUR PHOTO</span><small>05</small></div>
+        <div class="photo"><span>YOUR PHOTO</span><small>06</small></div>
+      </div>
+    </section>
+
+    <section class="section cake-section">
+      <div class="section-label">03 · Make a wish</div>
+      <h2 class="center-title">One candle. One beautiful wish. ✨</h2>
+      <div class="cake-wrap">
+        <div class="cake">
+          <div class="flame" id="flame"></div>
+          <div class="candle"></div>
+          <div class="icing"></div>
+          <div class="cake-top"></div>
+          <div class="cake-body"></div>
+          <div class="plate"></div>
+        </div>
+      </div>
+      <button class="primary" id="wishBtn">Blow the Candle 🎂</button>
+      <p id="wishText" class="wish-text">Close your eyes, make a wish... then tap the button. ♡</p>
+    </section>
+
+    <section class="section secret-section">
+      <div class="section-label">04 · A tiny secret</div>
+      <div class="secret-card">
+        <div class="lock" id="lock">🔒</div>
+        <h2>There's one more thing...</h2>
+        <p>Some surprises are better when you discover them yourself.</p>
+        <button class="outline" id="secretBtn">Unlock the message</button>
+        <div class="secret-message" id="secretMessage">
+          <p>Distance is only a number when someone has a special place in your heart.</p>
+          <p>So today, wherever you are, I hope you feel a little extra loved, appreciated and celebrated.</p>
+          <strong>Keep smiling, Pari. Your smile suits you. ❤️</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="final-glow"></div>
+      <p class="eyebrow">Until we celebrate together...</p>
+      <h2>No matter how many miles are between us,</h2>
+      <h1>today is all about <span>you.</span></h1>
+      <p>Happy Birthday, Pari. ✨</p>
+      <button class="music" id="musicBtn">♪ Play a little music</button>
+      <audio id="music" loop>
+        <!-- Add your own music file here: music/birthday.mp3 -->
+        <source src="music/birthday.mp3" type="audio/mpeg">
+      </audio>
+      <footer>Made with ♥ especially for Pari</footer>
+    </section>
+  </main>
+
+  <div id="confetti"></div>
+  <script src="script.js"></script>
+</body>
+</html>
