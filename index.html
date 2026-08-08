@@ -2,335 +2,719 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#17122b">
+
   <title>Happy Birthday Pari ❤️</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- LOADER -->
+
   <div id="loader">
-    <div class="loader-heart">♡</div>
-    <p>Something special is waiting for you...</p>
+    <div class="loader-heart">♥</div>
+    <div>Something special is waiting...</div>
   </div>
+
+
+  <!-- BACKGROUND -->
 
   <canvas id="stars"></canvas>
-  <div class="petals" aria-hidden="true"></div>
 
-  <main>
-    <section class="hero">
-      <div class="glow"></div>
-      <div class="hero-card">
-        <p class="eyebrow">A little surprise, made especially for you</p>
-        <h1>Happy Birthday,<br><span>Pari</span> <b>♥</b></h1>
-        <p class="hero-sub">Someone very special was born today. ✨</p>
-        <button class="primary" onclick="scrollToId('message')">Open Your Surprise <span>→</span></button>
-      </div>
-      <div class="scroll">SCROLL TO DISCOVER <span>↓</span></div>
-    </section>
+  <div class="petals"></div>
 
-    <section id="message" class="section">
-      <div class="section-label">01 · A little note</div>
-      <div class="letter reveal">
-        <p class="script">For you, Pari...</p>
-        <h2>Some people make ordinary days feel a little more beautiful.</h2>
-        <p>Aaj ka din mere liye bhi special h, kyunki aaj tum is duniya m ayi thi. 🎂</p>
-        <p>Bas dil se itni si wish h ki tum hamesha khush rho, hamesha smile karti rho, or tumhare har chhote-bade sapne poore ho.</p>
-        <p>Shayad hum ek dusre se door h, lekin distance kisi ki care, wishes or feelings ko kam nhi kar sakti. Tumhare liye meri dua hamesha wahi rahegi — <strong>tum khush rho, safe raho aur life mein bahut aage jao.</strong></p>
-        <p>Enjoy your day, birthday girl. You deserve all the beautiful things life has to offer. 🤍</p>
-        <p class="signature">Happy Birthday, Pari.<br><span>With lots of good wishes ♥</span></p>
-      </div>
-    </section>
-
-    <section class="section gallery-section">
-      <div class="section-label">02 · Little moments</div>
-      <h2 class="center-title">A place for your favorite memories.</h2>
-      <p class="center-sub">Replace these placeholders with Pari's photos in the <code>photos</code> folder.</p>
-      <<div class="gallery">
-  <div class="photo">
-    <img src="photo1.jfif" alt="Pari's Memory 01">
-    <small>01</small>
-  </div>
-
-  <div class="photo tall">
-    <img src="photo2.jfif" alt="Pari's Memory 02">
-    <small>02</small>
-  </div>
-
-  <div class="photo">
-    <img src="photo3.jfif" alt="Pari's Memory 03">
-    <small>03</small>
-  </div>
-
-  <div class="photo tall">
-    <img src="photo1.jfif" alt="Pari's Memory 04">
-    <small>04</small>
-  </div>
-
-  <div class="photo">
-    <img src="photo2.jfif" alt="Pari's Memory 05">
-    <small>05</small>
-  </div>
-
-  <div class="photo">
-    <img src="photo3.jfif" alt="Pari's Memory 06">
-    <small>06</small>
-  </div>
-</div>
-    </section>
-
-    <section class="section cake-section">
-      <div class="section-label">03 · Make a wish</div>
-      <h2 class="center-title">One candle. One beautiful wish. ✨</h2>
-      <div class="cake-wrap">
-        <div class="cake">
-          <div class="flame" id="flame"></div>
-          <div class="candle"></div>
-          <div class="icing"></div>
-          <div class="cake-top"></div>
-          <div class="cake-body"></div>
-          <div class="plate"></div>
-        </div>
-      </div>
-      <button class="primary" id="wishBtn">Blow the Candle 🎂</button>
-      <p id="wishText" class="wish-text">Close your eyes, make a wish... then tap the button. ♡</p>
-    </section>
-
-    <section class="section secret-section">
-      <div class="section-label">04 · A tiny secret</div>
-      <div class="secret-card">
-        <div class="lock" id="lock">🔒</div>
-        <h2>There's one more thing...</h2>
-        <p>Some surprises are better when you discover them yourself.</p>
-        <button class="outline" id="secretBtn">Unlock the message</button>
-        <div class="secret-message" id="secretMessage">
-          <p>Distance is only a number when someone has a special place in your heart.</p>
-          <p>So today, wherever you are, I hope you feel a little extra loved, appreciated and celebrated.</p>
-          <strong>Keep smiling, Pari. Your smile suits you. ❤️</strong>
-        </div>
-      </div>
-    </section>
-<!-- 05 · A little something -->
-<section class="section questions-section" id="questions">
-
-  <div class="section-label">05 · A little something</div>
-
-  <div class="questions-card">
-
-    <p class="script">Okay Pari... 😌</p>
-
-    <h2>Thoda sa kuch poochna hai tumse</h2>
-
-    <p class="question-intro">
-      Sach-sach answer dena... cheating bilkul allowed nahi hai. 😂❤️
-    </p>
-
-    <!-- Question 1 -->
-    <div class="question-box active" data-question="1">
-
-      <p class="question-number">Question 01</p>
-
-      <h3>
-        Sach-sach batao... mujhe pareshan karna tumhe itna pasand kyun hai? 😌😂
-      </h3>
-
-      <div class="answers">
-        <button class="answer">Kyunki mujhe maza aata hai 😌</button>
-        <button class="answer">Kyunki tum jaldi react karte ho 😂</button>
-        <button class="answer">Bas aise hi... koi reason nahi 😏</button>
-        <button class="answer">Pata nahi, aadat si ho gayi hai 🙈</button>
-      </div>
-
-    </div>
+  <div id="confetti"></div>
 
 
-    <!-- Question 2 -->
-    <div class="question-box" data-question="2">
+  <!-- HERO -->
 
-      <p class="question-number">Question 02</p>
+  <section class="hero">
 
-      <h3>
-        Jab tum mujhe woh “marne wali” emoji/message bhejti ho,
-        tab actually tumhare dimaag mein kya chal raha hota hai? 😂
-      </h3>
+    <div class="glow"></div>
 
-      <div class="answers">
-        <button class="answer">Aaj isko thoda aur pareshan karte hain 😈</button>
-        <button class="answer">Dekhte hain kitna tolerate karta hai 😂</button>
-        <button class="answer">Bas bhejne ka mann kiya 😌</button>
-        <button class="answer">Kuch nahi... main toh innocent hoon 😇</button>
-      </div>
+    <div class="hero-card">
 
-    </div>
-
-
-    <!-- Question 3 -->
-    <div class="question-box" data-question="3">
-
-      <p class="question-number">Question 03</p>
-
-      <h3>
-        Agar ek din ke liye main tumhe bilkul pareshan na karun,
-        toh kya hoga? 😌
-      </h3>
-
-      <div class="answers">
-        <button class="answer">Mujhe achha lagega 😌</button>
-        <button class="answer">Thoda ajeeb lagega 🤔</button>
-        <button class="answer">Main khud tumhe pareshan karungi 😂</button>
-        <button class="answer">Ek din? Itna bada torture nahi chahiye 😭😂</button>
-      </div>
-
-    </div>
-
-
-    <!-- Question 4 -->
-    <div class="question-box" data-question="4">
-
-      <p class="question-number">Question 04</p>
-
-      <h3>
-        Tumhe kya lagta hai, tumhari sabse cute aadat kya hai? 🥰
-      </h3>
-
-      <div class="answers">
-        <button class="answer">Meri smile 😊</button>
-        <button class="answer">Meri shaitani 😈</button>
-        <button class="answer">Mera nakhra 🙈</button>
-        <button class="answer">Mujhe khud nahi pata... tum batao 😌</button>
-      </div>
-
-    </div>
-
-
-    <!-- Question 5 -->
-    <div class="question-box" data-question="5">
-
-      <p class="question-number">Question 05</p>
-
-      <h3>
-        Last question... agar tumhare birthday par koi tumse door
-        rehkar bhi tumhe special feel karane ki poori koshish kare,
-        toh? 🥺❤️
-      </h3>
-
-      <div class="answers">
-        <button class="answer">That's really sweet 🥰</button>
-        <button class="answer">Mujhe bahut achha lagega ❤️</button>
-        <button class="answer">Main usse thank you bolungi 😊</button>
-        <button class="answer">Shayad... woh mere liye bhi thoda special hai 🙈❤️</button>
-      </div>
-
-    </div>
-
-
-    <!-- After all questions -->
-    <div class="question-surprise" id="questionSurprise">
-
-      <p class="script">Hmm... 😌</p>
-
-      <h2>Tumhare answers mil gaye. ❤️</h2>
-
-      <p>
-        Ab mujhe ek baat samajh aa gayi...
+      <p class="eyebrow">
+        A little surprise for someone special
       </p>
 
-      <p>
-        <strong>
-          Tum jitni shaitaan ho, utni hi special bhi ho. ❤️
-        </strong>
+      <h1>
+        Happy<br>
+        <span>Birthday</span>
+        <b>Pari</b>
+      </h1>
+
+      <p class="hero-sub">
+        Distance may keep us apart today,<br>
+        but it can't stop me from making your day a little special. ❤️
       </p>
 
-      <p>
-        Aur shayad isi liye tumhari har chhoti si shararat
-        mujhe itni achhi lagti hai.
-      </p>
-
-      <p>
-        Tumhara mujhe pareshan karna, bina wajah tang karna,
-        woh random messages bhejna...
-        <br>
-        pata nahi kyun, par ye sab mujhe bahut pasand hai. 🥰
-      </p>
-
-      <p class="special-line">
-        Ab tumhare liye ek chhota sa surprise hai... 🎁
-      </p>
-
-      <button class="primary" id="openFinalSurprise">
-        Open Your Surprise 🎁
+      <button
+        class="primary"
+        onclick="scrollToId('message')"
+      >
+        Open Your Surprise <span>→</span>
       </button>
 
     </div>
 
+    <div class="scroll">
+      SCROLL TO DISCOVER
+      <span>↓</span>
+    </div>
 
-    <!-- Final hidden message -->
-    <div class="final-surprise-message" id="finalSurpriseMessage">
+  </section>
 
-      <div class="surprise-glow"></div>
 
-      <p class="script">One last thing... ❤️</p>
+  <!-- MESSAGE -->
 
-      <h2>Happy Birthday, Pari. ✨</h2>
+  <section id="message" class="section">
+
+    <div class="section-label">
+      01 · A little note
+    </div>
+
+    <div class="letter reveal">
+
+      <p class="script">
+        For you, Pari...
+      </p>
+
+      <h2>
+        Some people make ordinary days feel a little more beautiful.
+      </h2>
 
       <p>
-        Tumhari shaitani, tumhari nautanki,
-        tumhare random messages,
-        bina kisi wajah mujhe pareshan karna...
+        Aaj ka din mere liye bhi special hai,
+        kyunki aaj tum is duniya mein aayi thi. 🎂
       </p>
 
       <p>
-        Pata nahi tumhe ye sab kitna normal lagta hai,
-        but somehow ye sab meri favourite cheezein ban gayi hain.
+        Bas dil se itni si wish hai ki tum hamesha khush raho,
+        hamesha smile karti raho,
+        aur tumhare har chhote-bade sapne poore ho.
       </p>
 
       <p>
-        Distance chahe jitna bhi ho,
-        tumhari smile ke liye meri wish hamesha paas rahegi.
-      </p>
-
-      <p class="special-line">
-        Bas tum aise hi rehna...
+        Shayad hum ek dusre se door hain,
+        lekin distance kisi ki care, wishes aur feelings ko
+        kam nahi kar sakti.
       </p>
 
       <p>
-        Thodi natkhat,<br>
-        thodi pagal,<br>
-        aur bilkul apne jaisi. ❤️
+        Tumhare liye meri dua hamesha wahi rahegi —
+        <strong>
+          tum khush raho, safe raho aur life mein bahut aage jao.
+        </strong>
       </p>
 
-      <h3>
-        Aur haan... mujhe aise hi pareshan karti rehna. 😌
-      </h3>
+      <p>
+        Enjoy your day, birthday girl.
+        You deserve all the beautiful things life has to offer. 🤍
+      </p>
 
       <p class="signature">
-        Happy Birthday once again, Pari. ❤️<br>
-        Keep smiling.
+        Happy Birthday, Pari.
+        <br>
+        <span>With lots of good wishes ♥</span>
       </p>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
-    <section class="final">
-      <div class="final-glow"></div>
-      <p class="eyebrow">Until we celebrate together...</p>
-      <h2>No matter how many miles are between us,</h2>
-      <h1>today is all about <span>you.</span></h1>
-      <p>Happy Birthday, Pari. ✨</p>
-      <button class="music" id="musicBtn">♪ Play a little music</button>
-      <audio id="music" loop>
-        <!-- Add your own music file here: music/birthday.mp3 -->
-        <source src="birthday.mp3.mpeg" type="audio/mpeg">
-      </audio>
-      <footer>Made with ♥ especially for Pari</footer>
-    </section>
-  </main>
 
-  <div id="confetti"></div>
+  <!-- PHOTO GALLERY -->
+
+  <section class="section gallery-section">
+
+    <div class="section-label">
+      02 · Little moments
+    </div>
+
+    <h2 class="center-title">
+      A place for your favorite memories.
+    </h2>
+
+    <p class="center-sub">
+      A few beautiful moments of a beautiful girl.
+    </p>
+
+
+    <div class="gallery">
+
+      <!-- PHOTO 1 -->
+      <div class="photo">
+        <img src="photos/photo1.jpg" alt="Pari Photo 1">
+        <small>01</small>
+      </div>
+
+
+      <!-- PHOTO 2 -->
+      <div class="photo">
+        <img src="photos/photo2.jpg" alt="Pari Photo 2">
+        <small>02</small>
+      </div>
+
+
+      <!-- PHOTO 3 -->
+      <div class="photo">
+        <img src="photos/photo3.jpg" alt="Pari Photo 3">
+        <small>03</small>
+      </div>
+
+
+      <!-- PHOTO 4 -->
+      <div class="photo">
+        <img src="photos/photo4.jpg" alt="Pari Photo 4">
+        <small>04</small>
+      </div>
+
+
+      <!-- PHOTO 5 -->
+      <div class="photo">
+        <img src="photos/photo5.jpg" alt="Pari Photo 5">
+        <small>05</small>
+      </div>
+
+
+      <!-- PHOTO 6 -->
+      <div class="photo">
+        <img src="photos/photo6.jpg" alt="Pari Photo 6">
+        <small>06</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAKE -->
+
+  <section class="section cake-section">
+
+    <div class="section-label">
+      03 · Make a wish
+    </div>
+
+    <h2 class="center-title">
+      One candle. One beautiful wish. ✨
+    </h2>
+
+    <div class="cake-wrap">
+
+      <div class="cake">
+
+        <div
+          class="flame"
+          id="flame"
+        ></div>
+
+        <div class="candle"></div>
+
+        <div class="icing"></div>
+
+        <div class="cake-top"></div>
+
+        <div class="cake-body"></div>
+
+        <div class="plate"></div>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="primary"
+      id="wishBtn"
+    >
+      Blow the Candle 🎂
+    </button>
+
+    <p
+      id="wishText"
+      class="wish-text"
+    >
+      Close your eyes, make a wish... then tap the button. ♡
+    </p>
+
+  </section>
+
+
+  <!-- SECRET -->
+
+  <section class="section secret-section">
+
+    <div class="section-label">
+      04 · A tiny secret
+    </div>
+
+    <div class="secret-card">
+
+      <div
+        class="lock"
+        id="lock"
+      >
+        🔒
+      </div>
+
+      <h2>
+        There's one more thing...
+      </h2>
+
+      <p>
+        Some surprises are better when you discover them yourself.
+      </p>
+
+      <button
+        class="outline"
+        id="secretBtn"
+      >
+        Unlock the message
+      </button>
+
+      <div
+        class="secret-message"
+        id="secretMessage"
+      >
+
+        <p>
+          Distance is only a number when someone has
+          a special place in your heart.
+        </p>
+
+        <p>
+          So today, wherever you are,
+          I hope you feel a little extra loved,
+          appreciated and celebrated.
+        </p>
+
+        <strong>
+          Keep smiling, Pari.
+          Your smile suits you. ❤️
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUESTIONS -->
+
+  <section
+    class="section questions-section"
+    id="questions"
+  >
+
+    <div class="section-label">
+      05 · A little something
+    </div>
+
+
+    <div class="questions-card">
+
+      <p class="script">
+        Okay Pari... 😌
+      </p>
+
+      <h2>
+        Thoda sa kuch poochna hai tumse
+      </h2>
+
+      <p class="question-intro">
+        Sach-sach answer dena...
+        cheating bilkul allowed nahi hai. 😂❤️
+      </p>
+
+
+      <!-- QUESTION 1 -->
+
+      <div
+        class="question-box active"
+        data-question="1"
+      >
+
+        <p class="question-number">
+          Question 01
+        </p>
+
+        <h3>
+          Sach-sach batao...
+          mujhe pareshan karna tumhe itna pasand kyun hai? 😌😂
+        </h3>
+
+        <div class="answers">
+
+          <button class="answer">
+            Kyunki mujhe maza aata hai 😌
+          </button>
+
+          <button class="answer">
+            Kyunki tum jaldi react karte ho 😂
+          </button>
+
+          <button class="answer">
+            Bas aise hi... koi reason nahi 😏
+          </button>
+
+          <button class="answer">
+            Pata nahi, aadat si ho gayi hai 🙈
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUESTION 2 -->
+
+      <div
+        class="question-box"
+        data-question="2"
+      >
+
+        <p class="question-number">
+          Question 02
+        </p>
+
+        <h3>
+          Jab tum mujhe woh "marne wali"
+          emoji/message bhejti ho,
+          tab actually tumhare dimaag mein kya chal raha hota hai? 😂
+        </h3>
+
+        <div class="answers">
+
+          <button class="answer">
+            Aaj isko thoda aur pareshan karte hain 😈
+          </button>
+
+          <button class="answer">
+            Dekhte hain kitna tolerate karta hai 😂
+          </button>
+
+          <button class="answer">
+            Bas bhejne ka mann kiya 😌
+          </button>
+
+          <button class="answer">
+            Kuch nahi... main toh innocent hoon 😇
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUESTION 3 -->
+
+      <div
+        class="question-box"
+        data-question="3"
+      >
+
+        <p class="question-number">
+          Question 03
+        </p>
+
+        <h3>
+          Agar ek din ke liye main tumhe
+          bilkul pareshan na karun,
+          toh kya hoga? 😌
+        </h3>
+
+        <div class="answers">
+
+          <button class="answer">
+            Mujhe achha lagega 😌
+          </button>
+
+          <button class="answer">
+            Thoda ajeeb lagega 🤔
+          </button>
+
+          <button class="answer">
+            Main khud tumhe pareshan karungi 😂
+          </button>
+
+          <button class="answer">
+            Ek din? Itna bada torture nahi chahiye 😭😂
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUESTION 4 -->
+
+      <div
+        class="question-box"
+        data-question="4"
+      >
+
+        <p class="question-number">
+          Question 04
+        </p>
+
+        <h3>
+          Tumhe kya lagta hai,
+          tumhari sabse cute aadat kya hai? 🥰
+        </h3>
+
+        <div class="answers">
+
+          <button class="answer">
+            Meri smile 😊
+          </button>
+
+          <button class="answer">
+            Meri shaitani 😈
+          </button>
+
+          <button class="answer">
+            Mera nakhra 🙈
+          </button>
+
+          <button class="answer">
+            Mujhe khud nahi pata... tum batao 😌
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUESTION 5 -->
+
+      <div
+        class="question-box"
+        data-question="5"
+      >
+
+        <p class="question-number">
+          Question 05
+        </p>
+
+        <h3>
+          Last question...
+          agar tumhare birthday par koi tumse door rehkar bhi
+          tumhe special feel karane ki poori koshish kare,
+          toh? 🥺❤️
+        </h3>
+
+        <div class="answers">
+
+          <button class="answer">
+            That's really sweet 🥰
+          </button>
+
+          <button class="answer">
+            Mujhe bahut achha lagega ❤️
+          </button>
+
+          <button class="answer">
+            Main usse thank you bolungi 😊
+          </button>
+
+          <button class="answer">
+            Shayad... woh mere liye bhi thoda special hai 🙈❤️
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- AFTER QUESTIONS -->
+
+      <div
+        class="question-surprise"
+        id="questionSurprise"
+      >
+
+        <p class="script">
+          Hmm... 😌
+        </p>
+
+        <h2>
+          Tumhare answers mil gaye. ❤️
+        </h2>
+
+        <p>
+          Ab mujhe ek baat samajh aa gayi...
+        </p>
+
+        <p>
+          <strong>
+            Tum jitni shaitaan ho,
+            utni hi special bhi ho. ❤️
+          </strong>
+        </p>
+
+        <p>
+          Aur shayad isi liye tumhari
+          har chhoti si shararat
+          mujhe itni achhi lagti hai.
+        </p>
+
+        <p>
+          Tumhara mujhe pareshan karna,
+          bina wajah tang karna,
+          woh random messages bhejna...
+          <br>
+          pata nahi kyun,
+          par ye sab mujhe bahut pasand hai. 🥰
+        </p>
+
+        <p class="special-line">
+          Ab tumhare liye ek chhota sa surprise hai... 🎁
+        </p>
+
+        <button
+          class="primary"
+          id="openFinalSurprise"
+        >
+          Open Your Surprise 🎁
+        </button>
+
+      </div>
+
+
+      <!-- FINAL SURPRISE -->
+
+      <div
+        class="final-surprise-message"
+        id="finalSurpriseMessage"
+      >
+
+        <div class="surprise-glow"></div>
+
+        <p class="script">
+          One last thing... ❤️
+        </p>
+
+        <h2>
+          Happy Birthday, Pari. ✨
+        </h2>
+
+        <p>
+          Tumhari shaitani,
+          tumhari nautanki,
+          tumhare random messages,
+          bina kisi wajah mujhe pareshan karna...
+        </p>
+
+        <p>
+          Pata nahi tumhe ye sab kitna normal lagta hai,
+          but somehow ye sab meri favourite cheezein
+          ban gayi hain.
+        </p>
+
+        <p>
+          Distance chahe jitna bhi ho,
+          tumhari smile ke liye meri wish
+          hamesha paas rahegi.
+        </p>
+
+        <p class="special-line">
+          Bas tum aise hi rehna...
+        </p>
+
+        <p>
+          Thodi natkhat,
+          <br>
+          thodi pagal,
+          <br>
+          aur bilkul apne jaisi. ❤️
+        </p>
+
+        <h3>
+          Aur haan...
+          mujhe aise hi pareshan karti rehna. 😌
+        </h3>
+
+        <p class="signature">
+          Happy Birthday once again, Pari. ❤️
+          <br>
+          Keep smiling.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+
+  <section class="final">
+
+    <div class="final-glow"></div>
+
+    <p class="eyebrow">
+      Until we celebrate together...
+    </p>
+
+    <h2>
+      No matter how many miles are between us,
+    </h2>
+
+    <h1>
+      today is all about
+      <span>you.</span>
+    </h1>
+
+    <p>
+      Happy Birthday, Pari. ✨
+    </p>
+
+
+    <button
+      class="music"
+      id="musicBtn"
+    >
+      ♪ Play a little music
+    </button>
+
+
+    <audio
+      id="music"
+      loop
+      preload="auto"
+    >
+      <source
+        src="birthday.mp3.mpeg"
+        type="audio/mpeg"
+      >
+    </audio>
+
+
+    <footer>
+      Made with ♥ especially for Pari
+    </footer>
+
+  </section>
+
+
+  <!-- SCRIPT -->
+
   <script src="script.js"></script>
+
 </body>
 </html>
