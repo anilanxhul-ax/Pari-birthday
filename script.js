@@ -69,3 +69,69 @@ openFinalSurprise.addEventListener("click", () => {
   }, 200);
 
 });
+/* =========================================
+   BIRTHDAY QUESTIONS & FINAL SURPRISE
+========================================= */
+
+const questionBoxes = document.querySelectorAll(".question-box");
+const questionSurprise = document.getElementById("questionSurprise");
+const openFinalSurprise = document.getElementById("openFinalSurprise");
+const finalSurpriseMessage = document.getElementById("finalSurpriseMessage");
+
+let currentQuestion = 0;
+
+document.querySelectorAll(".answer").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    questionBoxes[currentQuestion].classList.remove("active");
+
+    currentQuestion++;
+
+    if (currentQuestion < questionBoxes.length) {
+
+      questionBoxes[currentQuestion].classList.add("active");
+
+      setTimeout(() => {
+        questionBoxes[currentQuestion].scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 150);
+
+    } else {
+
+      questionSurprise.classList.add("show");
+
+      setTimeout(() => {
+        questionSurprise.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 200);
+
+    }
+
+  });
+
+});
+
+
+/* Open the final surprise */
+
+openFinalSurprise.addEventListener("click", () => {
+
+  finalSurpriseMessage.classList.add("show");
+
+  openFinalSurprise.style.display = "none";
+
+  setTimeout(() => {
+
+    finalSurpriseMessage.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+  }, 200);
+
+});
